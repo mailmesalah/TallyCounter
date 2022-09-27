@@ -1,0 +1,1 @@
+1> Works along with 'Barcode checker'

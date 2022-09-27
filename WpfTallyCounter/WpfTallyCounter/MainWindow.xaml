@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfTallyCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTallyCounter"
+        mc:Ignorable="d"
+        Title="ferdzVerifier" Height="442.773" Width="783" Icon="ico.png" Closing="Window_Closing">
+    <Grid Margin="0,0,0,0">
+        <DockPanel Margin="0,0,0,0">
+            <Menu x:Name="menu" DockPanel.Dock="Top" Padding="5,5,0,0" Height="478" HorizontalAlignment="Left" Width="802">
+                <MenuItem x:Name="menuFile" Header="_File">
+                    <MenuItem x:Name="menuImport" Header="_Import" Click="menuImport_Click" />
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <ListBox x:Name="listBoxBarcodes" HorizontalAlignment="Left" Height="341" Margin="8,38,0,0" VerticalAlignment="Top" Width="373" FontSize="18.667" ToolTip="Lists the accepted barcodes..."/>
+        <TextBox x:Name="textBoxInput" HorizontalAlignment="Left" Height="45" Margin="386,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" ToolTip="Enter barcode here..." KeyDown="textBoxInput_KeyDown" FontWeight="Bold" FontSize="18.667" SpellCheck.IsEnabled="True" />
+        <Label x:Name="labelCount" Content="0" HorizontalAlignment="Left" Height="148" Margin="386,88,0,0" VerticalAlignment="Top" Width="373" ToolTip="Shows the total number of accepted barcodes." FontSize="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" />
+        <Image x:Name="imageStatus" HorizontalAlignment="Left" Height="100" Margin="523,241,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
